@@ -1,31 +1,39 @@
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Dynamic Lyrics</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Lyrics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class="container"> 
+  <div class="dark-mode-container"><li class="dark-mode bi-moon"></li></div>
+  
+  <div class="container">
     <div class="inner-container">
-        <input id="song_name" type="text" placeholder="Song Name" required> <br>
-        <input id="artist_name" type="text" placeholder="Artist Name" required> <br>
-        
-        <button  onclick="findLyrics()">Find Lyrics</button>
+      <input id="song_name" type="text" placeholder="Enter Song Name" required> <br>
+      <input id="artist_name" type="text" placeholder="Enter Artist Name" required> <br>
+
+      <button onclick="findLyrics()">Search Lyrics</button>
     </div>
-    </div>
-    
-    <details class="lyrics-container" id="lyrics-container">
-       <summary>Lyrics</summary>
-       <p class="lyrics-text" id="lyrics-text">No Lyrics Found !</p>
-    </details>
-    
-    <div class="notify" id="notify">
-        <li class="bi-info-circle"></li>
-        <p>&nbsp;No Lyrics Found</p>
-    </div>
-    
-    <script src="script.js"></script>
+  </div>
+
+  <details class="lyrics-container" id="lyrics-container">
+    <summary>
+      Lyrics<li onclick="copyLyrics()" class="copy bi-copy"></li>
+    </summary>
+    <p class="lyrics-text" id="lyrics-text">
+      No Lyrics Found !
+    </p>
+  </details>
+
+  <div class="notify" id="notify">
+    <li class="bi-info-circle"></li>
+    <p>&nbsp;No Lyrics Found</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

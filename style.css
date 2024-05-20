@@ -4,9 +4,34 @@
     list-style: none;
 }
 
+body {
+  background: #1f1f1f;
+}
+
+.dark-mode-container {
+  margin: 10px;
+  padding: 10px;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+}
+
+.dark-mode {
+  background: whitesmoke;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .inner-container {
     text-align: center;
-    background: lightsalmon;
+    background: #28282a;
+    width: 100%;
+    height: 100%;
     padding: 10px;
     border-radius: 20px;
 }
@@ -21,32 +46,56 @@
 input, button {
     margin: 10px;
     border: none;
+    color: whitesmoke;
 }
 
 input {
     border-radius: 25px;
     padding: 20px;
+    background: #3b414a;
+    font-size: 15px;
+}
+
+input:focus {
+  outline: 1px solid lightcyan;
+}
+
+input::placeholder {
+  color: whitesmoke;
 }
 
 button {
     border-radius: 40px;
     padding: 15px 20px;
     width: 8rem;
+    background: whitesmoke;
+    color: black;
 }
 
-button:hover {
-    background: lightskyblue;
+button:active {
+    background: #B8B9BE;
 }
 
 .lyrics-container {
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 30px;
     background: aliceblue;
     border-radius: 10px;
 }
 
 .lyrics-text {
     padding: 20px 0 0 0;
+}
+
+.copy {
+  margin-left: 70%;
+  padding: 15px;
+}
+
+summary {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
 }
 
 .notify {
@@ -62,4 +111,9 @@ button:hover {
 
 .notify li {
     margin: 0px 5px 0px 0px;
+    color: white;
+}
+
+.notify p {
+  color: white;
 }
