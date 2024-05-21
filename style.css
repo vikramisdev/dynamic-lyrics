@@ -25,6 +25,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: lightblue;
 }
 
 .inner-container {
@@ -64,6 +65,10 @@ input::placeholder {
   color: whitesmoke;
 }
 
+.black-placeholder::placeholder {
+  color: black;
+}
+
 button {
     border-radius: 40px;
     padding: 15px 20px;
@@ -88,7 +93,6 @@ button:active {
 }
 
 .copy {
-  margin-left: 70%;
   padding: 15px;
 }
 
@@ -98,10 +102,19 @@ summary {
   align-items: center;
 }
 
+summary li {
+  float: right;
+}
+
+summary p {
+  margin-left: 10px;
+  width: 100%;
+}
+
 .notify {
     margin: 5%;
     position: fixed;
-    bottom: -100px;
+    bottom: -100%;
     background: red;
     padding: 5%;
     width: 80%;

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="dark-mode-container"><li class="dark-mode bi-moon"></li></div>
+  <div class="dark-mode-container"><li id="dark-mode" class="dark-mode bi-moon-fill"></li></div>
   
   <div class="container">
     <div class="inner-container">
@@ -21,7 +21,7 @@
 
   <details class="lyrics-container" id="lyrics-container">
     <summary>
-      Lyrics<li onclick="copyLyrics()" class="copy bi-copy"></li>
+      <p>Lyrics</p><li onclick="copyLyrics()" id="copy" class="copy bi-copy"></li>
     </summary>
     <p class="lyrics-text" id="lyrics-text">
       No Lyrics Found !

@@ -45,7 +45,7 @@ function showNotification(text, duration = 2000) {
 
   setTimeout(function() {
     $("#notify").stop().animate({
-      bottom: '-100px'
+      bottom: '-100%'
     }, 300);
   }, duration);
 }
@@ -60,3 +60,61 @@ function copyLyrics() {
   });
 }
 
+function switchClasses(obj, class1Name, class2Name) {
+  obj.removeClass(class1Name);
+  obj.addClass(class2Name);
+}
+
+$(".dark-mode").click(function() {
+  if($(this).hasClass("bi-moon-fill")) {
+    switchClasses($(this), "bi-moon-fill", "bi-sun-fill");
+    
+    // change button colors
+    $(this).css({
+      background: "black",
+      color: "orange"
+    })
+    
+    // change colors
+    $("body").css({
+      background: "whitesmoke"
+    })
+    
+    $(".inner-container").css({
+      background: "white"
+    })
+    
+    $("input").css({
+      background: "whitesmoke",
+      color: "black"
+    })
+    
+    $("input").addClass("black-placeholder");
+    
+  } else if($(this).hasClass("bi-sun-fill")) {
+    switchClasses($(this), "bi-sun-fill", "bi-moon-fill");
+    
+    // change button colors
+    $(this).css({
+      background: "white",
+      color: "lightblue"
+    })
+    
+    // change colors
+    $("body").css({
+      background: "#1f1f1f"
+    })
+    
+    $(".inner-container").css({
+      background: "#28282a"
+    })
+    
+    $("input").css({
+      background: "#3b414a",
+      color: "whitesmoke"
+    })
+    
+    $("input").removeClass("black-placeholder");
+    
+  }
+})
