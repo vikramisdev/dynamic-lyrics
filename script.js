@@ -28,7 +28,7 @@ function findLyrics() {
         $("#lyrics-container").scroll();
       }
       else if (this.status === 404) {
-        showNotification();
+        showNotification("Couldn't find any lyrics !");
       }
     }
   };
